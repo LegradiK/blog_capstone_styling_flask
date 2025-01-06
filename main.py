@@ -1,9 +1,6 @@
 from flask import Flask, render_template
-import requests
 
 app = Flask(__name__)
-
-response = requests.get(url="https://api.npoint.io/28ade7d0524d0c348ff6")
 
 @app.route('/')
 def home():
