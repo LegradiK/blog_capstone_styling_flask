@@ -57,7 +57,7 @@ def contact():
             server.sendmail(gmail_address, receiver_email, email_message.as_string())
             print("Email has been successfully sent.")
         except Exception as e:
-            print(f"Failed to send email: {e}")
+            print(f"Failed to send email: {type(e).__name__} - {e}")
         finally:
             server.quit()
         return render_template("contact.html", method=method)
